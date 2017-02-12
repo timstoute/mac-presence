@@ -30,9 +30,9 @@ global w_service
 PROBE_REQUEST_TYPE=0
 PROBE_REQUEST_SUBTYPE=4
 
-allDevices = {'00:56:cd:58:64:5b':'RM','cc:20:e8:7a:94:e0':'Judy','ac:bc:32:ad:21:93':'Tim Mac Book','98:FE:94:4E:29:06':'Aine MacBook','6c:94:f8:8f:5e:eb':'Teas ipad','64:bc:0c:51:48:48':'Tim N5x','e8:50:8b:41:d1:33':'Tim S6 Phone','f4:f1:e1:12:ec:67':'Parker','64:77:91:e7:b3:77':'Lina Apple device','2c:f0:ee:29:f8:12':'Renee Laptop','28:5a:eb:c4:5d:96':'Renee Phone','c8:85:50:7a:d0:af':'Aine phone' } # dict of known devices
-smartPhones = {'00:56:cd:58:64:5b':'RM','cc:20:e8:7a:94:e0':'Judy','64:bc:0c:51:48:48':'Tim N5x','e8:50:8b:41:d1:33':'Tim S6 Phone','f4:f1:e1:12:ec:67':'Parker Phone','64:77:91:e7:b3:77':'Lina Phone','28:5a:eb:c4:5d:96':'Renee Phone','c8:85:50:7a:d0:af':'Aine phone'} # dict of known devices
-otherDevices = {'ac:bc:32:ad:21:93':'Tim Mac Book','98:FE:94:4E:29:06':'Aine MacBook','6c:94:f8:8f:5e:eb':'Teas ipad','2c:f0:ee:29:f8:12':'Renee Laptop',}
+allDevices = {'00:56:cd:58:64:5b':'RM','cc:20:e8:7a:94:e0':'J','ac:bc:32:ad:21:93':' Mac Book','98:FE:94:4E:29:06':'A MacBook','6c:94:f8:8f:5e:eb':'T ipad','64:bc:0c:51:48:48':'N5x','e8:50:8b:41:d1:33':'T S6 Phone','f4:f1:e1:12:ec:67':'P','64:77:91:e7:b3:77':'L Apple device','2c:f0:ee:29:f8:12':'R Laptop','28:5a:eb:c4:5d:96':'R Phone','c8:85:50:7a:d0:af':'A phone' } # dict of known devices
+smartPhones = {'00:56:cd:58:64:5b':'RM','cc:20:e8:7a:94:e0':'J','64:bc:0c:51:48:48':' N5x','e8:50:8b:41:d1:33':'T S6 Phone','f4:f1:e1:12:ec:67':'P Phone','64:77:91:e7:b3:77':'L Phone','28:5a:eb:c4:5d:96':'R Phone','c8:85:50:7a:d0:af':'A phone'} # dict of known devices
+otherDevices = {'ac:bc:32:ad:21:93':'T Mac Book','98:FE:94:4E:29:06':'A MacBook','6c:94:f8:8f:5e:eb':'T ipad','2c:f0:ee:29:f8:12':'R Laptop',}
 IGNORELIST = {'00:1d:63:01:15:8b':'Miele device A','00:1d:63:01:15:39':'Miele device B','00:1d:63:01:33:51':'Miele device C','6c:ad:f8:cc:c6:dd':'Chromecast','b0:05:94:b4:ab:e1':'LiteOn','00:07:80:60:b1:62':'Neighbour device','00:c0:ca:32:c0:bb':'Alfa','b8:e9:37:87:a3:13':'Sonos A','00:0e:58:de:5c:73':'Sonos B','00:0e:58:bb:87:10':'Sonos C','00:0e:58:bb:87:0f':'Sonos D'} #dict of devices to ignore
 PRESENT={}
 SESSIONIGNORELIST ={}
@@ -238,11 +238,11 @@ def CheckForAbsences():
         threading.Timer((PollTime*60), CheckForAbsences).start()
 
 def SendEmail(mac, msg, deviceType):
-    smtpUser = 'stoute@gmail.com'
-    smtpPass = 'bpdypeiznqkijywy'
+    smtpUser = 's@gmail.com'
+    smtpPass = 'xxxx'
 
-    toAdd = 'stoute@gmail.com'
-    fromAdd = 'stoute@gmail.com'
+    toAdd = 's@gmail.com'
+    fromAdd = 's@gmail.com'
 
     subject = 'device notification'
     header = 'To: ' + toAdd + '\n' + 'From: ' + fromAdd + '\n' + 'Subject: ' + subject
